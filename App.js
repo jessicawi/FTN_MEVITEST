@@ -1,15 +1,16 @@
 import React, {useEffect} from 'react';
+import {Text, View, Dimensions} from 'react-native';
 // import MenuList from './src/navigation/menuList';
-import {Provider} from 'react-redux';
-import store from './store';
 import FlashMessage from "react-native-flash-message";
+import {WebView} from 'react-native-webview';
+
+const deviceHeight = Dimensions.get("window").height;
 
 const App = () => {
     return (
-        <Provider store={store}>
-            {/*<MenuList/>*/}
-            <FlashMessage position="top" style={{zIndex: 99999999}}/>
-        </Provider>
+        <View style={{minHeight: deviceHeight}}>
+            <WebView source={{uri: 'https://mevi.bclg.in/'}}/>
+        </View>
     );
 };
 
