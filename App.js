@@ -9,7 +9,7 @@ const deviceHeight = Dimensions.get("window").height;
 const App = () => {
     return (
         <View style={{minHeight: deviceHeight}}>
-            <WebView source={{uri: 'https://mevi.bclg.in/'}}/>
+            <WebView source={{uri: 'https://mevitest.bclg.in/'}}/>
         </View>
     );
 };
